@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<style>
+body{
+  width:100%;
+
+}
+    #n1{
+        color:white ;
+     
+    }
+    #nm,#dat{
+        color: white;
+    }
+    #dat{
+        justify-content:right;
+    }
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button{
+      -webkit-appearance:none;
+    }
+    .list-group-item{
+      border:0;
+      margin: 4% 8% 4% 8%;
+      background-color: black;
+    }
+    input{
+      width:100%;
+      border-radius: 10px;
+      padding:2%;
+    }
+    .item1{
+      margin-top: 4%;
+    }
+    .item3{
+    
+      margin-bottom: 10%;  
+    }
+    .card{
+      background-color: black;
+    }
+    #main{
+
+      background-image: url("bg1.jpg");
+      background-size:cover;
+      width:100%;
+      height:50vw;
+      background-repeat: no-repeat;
+    }
+    #mg{
+      margin-top: 20%;
+    }
+</style>
+<script>
+    $(document).ready(function(){
+        $("button").click(function(e){
+            var name=$("#name").val();
+            var date=$("#date").val();
+            var num=$("#num").val();
+            var num1=num.substring(0,4);
+            var num2=num.substring(4,8);
+            var num3=num.substring(8,12);
+            var num4=num.substring(12,16);
+
+            $("#nm").html(name);
+            $("#dt").html(date);
+            $("#n1").html(num1);
+            $("#n2").html(num2);
+            $("#n3").html(num3);
+            $("#n4").html(num4);
+        e.preventDefault();
+        });
+    });
+          </script>
+</head>
+<body>
+    <div id="main">
+    <div class="container text-center">
+        <div class="row" >
+          <div class="col-6">
+           
+            <form action="" >
+                <div id="mg">
+                   
+                  <div class="card" style="width: 25rem;">
+                    <div class="list-group list-group-flush">
+                      <div class="list-group-item item1" >
+                        <div class="card-header " style="color: white;padding-bottom:6%;"><h2>ATM CARD REGISTRATION</h2></div>
+                        <input type="text" placeholder="Cardholder Name" id="name" maxlength="16">
+                      </div>
+                      <div class="list-group-item">
+                        <input type="text" placeholder="Card Number" id="num" maxlength="16">
+                      </div>
+                      <div class="list-group-item item3">
+                        <input type="text" placeholder="MM-YY" id="date" maxlength="5">
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <button class="btn btn-warning" id="btn">SUBMIT</button>
+                    </div>
+                  </div>
+                </div>
+            </form>
+
+          </div>
+          <div class="col-6" style="margin-top: 3%;">
+            <div id="mg">
+            <div class="card" style="background-color: black;border-radius: 20px;">
+                <div class="row" style="padding-top: 2%;">
+                <div class="col-6">
+                    <div class="card-header " style="justify-content: left;"><img src="card.png" width="200px" height="30px" ></div>
+                </div>
+                <div class="col-6">
+<img src="chip-logo.png" width="50px" height="40px" style="justify-content: right;margin:3px 0 0 200px;" >
+                </div>
+                </div>
+
+                <div class="card-body mt-5" style="color: white;text-align: left;margin-left:7%;">
+                  <h5 class="card-title" >Card Number</h5>
+                  <p class="card-text">
+                    <span id="n1"></span>&nbsp;
+                    <span id="n2"></span>&nbsp;
+                    <span id="n3"></span>&nbsp;
+                    <span id="n4"></span> 
+                                      
+                  </p>
+                  <p class="pt-5">
+                    <div class="row">
+                        <div class="col-6 pt-3">
+                    <span id="nm"></span>
+                    </div>
+                    <div class="col-6">
+                    <span id="dat" style="margin:0 0 0 190px;padding-top:100px ;" >
+                        <span>Valid Thru</span>
+                       <p> <span id="dt" style="justify-content: right;margin:3px 0 0 213px;"></span></p>
+                    </span>
+                    </div>
+                    </div>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+</body>
+</body>
+</html>
